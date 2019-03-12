@@ -24,7 +24,11 @@ public class FXMLController implements Initializable {
 
         // Need stage to change scenes
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/NewScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/NewScene.fxml"));
+
+        NewSceneController controller = new NewSceneController("Hello There");
+        loader.setController(controller);
+        Parent root = loader.load();
         Scene newScene = new Scene(root);
 
         stage.hide(); //optional

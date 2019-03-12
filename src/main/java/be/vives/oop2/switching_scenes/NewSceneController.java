@@ -6,6 +6,10 @@ import javafx.fxml.Initializable;
 
 public class NewSceneController implements Initializable {
 
+    public NewSceneController(String message) {
+      System.out.println(message);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
